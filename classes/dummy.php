@@ -64,12 +64,12 @@ class dummy implements \core\grade\rule\rule_interface {
      * We do not need to modify the final grade so just return the current value.
      *
      * @param \grade_item  $item
-     * @param \grade_grade $grade
+     * @param int          $userid
      * @param float        $currentvalue
      *
      * @return float
      */
-    public function final_grade_modifier(&$item,  &$grade, $currentvalue) {
+    public function final_grade_modifier(&$item, $userid, $currentvalue) {
 
         return $currentvalue;
     }
@@ -78,12 +78,13 @@ class dummy implements \core\grade\rule\rule_interface {
      * We do not have to modify the symbol either so just return current symbol.
      *
      * @param \grade_item  $item
-     * @param \grade_grade $grade
+     * @param float        $value
+     * @param int          $userid
      * @param string       $currentsymbol
      *
      * @return string
      */
-    public function symbol_modifier(&$item, &$grade, $currentsymbol) {
+    public function symbol_modifier(&$item, $value, $userid, $currentsymbol) {
 
         return $currentsymbol;
     }
@@ -91,12 +92,12 @@ class dummy implements \core\grade\rule\rule_interface {
     /**
      * There are no status messages for dummy status.
      *
-     * @param \grade_item                  $item
-     * @param \grade_grade|\grade_category $grade
+     * @param \grade_item $item
+     * @param int         $userid
      *
      * @return status
      */
-    public function get_status_message(&$item, &$grade) {
+    public function get_status_message(&$item, $userid) {
 
         return null;
     }
