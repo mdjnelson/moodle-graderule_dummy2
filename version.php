@@ -25,6 +25,6 @@
 defined('MOODLE_INTERNAL') || die('');
 
 $plugin->component = 'graderule_dummy';
-$plugin->version   = 2020011500;
+$plugin->version   = 2020021400;
 $plugin->requires  = 2019051100;
 

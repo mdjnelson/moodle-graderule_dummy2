@@ -63,13 +63,13 @@ class dummy implements \core\grade\rule\rule_interface {
     /**
      * We do not need to modify the final grade so just return the current value.
      *
-     * @param \grade_item  $item
-     * @param int          $userid
-     * @param float        $currentvalue
+     * @param \grade_item $item
+     * @param int         $userid
+     * @param float       $currentvalue
      *
      * @return float
      */
-    public function final_grade_modifier(&$item, $userid, $currentvalue) {
+    public function final_grade_modifier(&$item,  $userid, $currentvalue) {
 
         return $currentvalue;
     }
@@ -78,8 +78,7 @@ class dummy implements \core\grade\rule\rule_interface {
      * We do not have to modify the symbol either so just return current symbol.
      *
      * @param \grade_item  $item
-     * @param float        $value
-     * @param int          $userid
+     * @param int         $userid
      * @param string       $currentsymbol
      *
      * @return string
@@ -152,7 +151,7 @@ class dummy implements \core\grade\rule\rule_interface {
     /**
      * We do not have to bother with recursing for dummy.
      *
-     * @param \grade_item $grade_item
+     * @param \grade_item $gradeitem
      *
      * @return void
      */

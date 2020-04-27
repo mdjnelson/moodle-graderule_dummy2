@@ -66,7 +66,6 @@ class dao {
 
     public static function delete_instance($instanceid) {
         global $DB;
-
         $DB->delete_records('graderule_dummy', ['id' => $instanceid]);
     }
 
