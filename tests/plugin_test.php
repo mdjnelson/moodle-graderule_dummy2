@@ -37,7 +37,7 @@ class graderule_dummy_plugin_testcase extends \advanced_testcase {
     private $generator;
     private $gradeitems;
 
-    public function setUp() {
+    public function setUp(): void {
 
         parent::setUp();
 
