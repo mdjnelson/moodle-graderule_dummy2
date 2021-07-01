@@ -24,12 +24,11 @@
 
 namespace graderule_dummy;
 
+use core\grade\rule\rule_interface;
+
 defined('MOODLE_INTERNAL') || die('');
 
-use core\grade\rule;
-use core\grade\status;
-
-class dummy implements \core\grade\rule\rule_interface {
+class rule implements rule_interface {
 
     /** @var integer */
     private $dummyitemid;
@@ -37,14 +36,21 @@ class dummy implements \core\grade\rule\rule_interface {
     /** @var integer */
     private $instanceid;
 
+    /** @var boolean */
     private $needsupdate;
 
     /** @var boolean */
     private $enabled = false;
 
-
+    /**
+     * Dummy constructor.
+     *
+     * @param $enabled
+     * @param $dummyitemid
+     * @param int $instanceid
+     */
     public function __construct($enabled, $dummyitemid, $instanceid = -1) {
-        $this->enabled     = $enabled;
+        $this->enabled = $enabled;
         $this->dummyitemid = $dummyitemid;
         $this->instanceid  = $instanceid;
         $this->needsupdate = false;
@@ -55,7 +61,7 @@ class dummy implements \core\grade\rule\rule_interface {
      *
      * @return bool
      */
-    public function enabled() {
+    public function is_enabled(): bool {
 
         return $this->enabled;
     }
