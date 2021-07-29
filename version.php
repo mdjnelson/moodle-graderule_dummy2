@@ -17,14 +17,14 @@
 /**
  * A grade rule pluign to test the grade rule API
  *
- * @package   graderule_dummy
+ * @package   graderule_dummy2
  * @author    Marcus Boon <marcus@catalyst-au.net>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die('');
 
-$plugin->component = 'graderule_dummy';
+$plugin->component = 'graderule_dummy2';
 $plugin->version   = 2020021400;
 $plugin->requires  = 2019051100;
 
