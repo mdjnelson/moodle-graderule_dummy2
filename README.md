@@ -6,7 +6,7 @@ The dummy grade rule plugin implements the grade rule API for testing purposes.
 The following sections outline how to install the Moodle Plugin.
 
 ### Command Line Installation
-To install the plugin in Moodle via the command line (assumes a Linux based system):
+To install the plugin in Moodle via the command line:
 
 1. Visit `<moodledir>/grade/rule/`.
 2. Run `git clone https://github.com/mdjnelson/moodle-graderule_dummy.git dummy`.
